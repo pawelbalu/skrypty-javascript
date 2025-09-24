@@ -5,21 +5,34 @@ let x = 3
 let y = 5
 let z = 0
 
-
-
-if (x>y){
-    if (x>z){
-        console.log('największa liczba to '+x)
-    }else{
-        console.log('największa liczba to '+z)
+if (x!=y && x!=z && y!=z){ // sprawdzanie czy są różne
+    if(x>y && x>z){
+        console.log('Największa wartość to '+x)
     }
-}else if (y>x){
-    if (y>z){
-        console.log('największa liczba to '+y)
-    }else{
-        console.log('największa liczba to '+z)
+    if (y>x && y>z){
+        console.log('Największa wartość to '+y)
+    }
+    if (z>x && z>y){
+        console.log('Największa wartość to '+z)
     }
 }
+
+
+
+
+// if (x>y){
+//     if (x>z){
+//         console.log('największa liczba to '+x)
+//     }else{
+//         console.log('największa liczba to '+z)
+//     }
+// }else if (y>x){
+//     if (y>z){
+//         console.log('największa liczba to '+y)
+//     }else{
+//         console.log('największa liczba to '+z)
+//     }
+// }
 
 
 
