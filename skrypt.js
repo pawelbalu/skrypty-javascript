@@ -1,1 +1,1 @@
-console.log("Uczę się JS")
+document.getElementById('p').innerHTML = "Hello World"
