@@ -1,21 +1,18 @@
-let x = 115
+// INSTRUKCJA WARUNKOWA SWITCH
+// break zatrzymuje działanie bo bez niego po case 5 wyświetla się w konsoli również default który nie powinien
 
-// if (x==15){
-//     console.log('Wartość x = 15')
-// }else if (x<15){
-//     console.log('Wartość x jest mniejsza od 15')
-// }else if (x>15){  // można napisac else tylko w tym przypadku
-//     console.log('Wartość x jest większa od 15')
-// }
+let x = 5
 
-// if (x % 2 == 0){
-//     console.log('Jest to liczba parzysta')
-// }else{
-//     console.log('Jest to liczba nieparzysta')
-// }
-
-// OPERATOR WARUNKOWY
-
-const czyParzysta = (x % 2 == 0)? 'parzysta' : 'nieparzysta'
-
-console.log(czyParzysta)
+switch (x) {
+    case 1:
+        console.log('x wynosi 1')
+        break;
+    case 3:
+        console.log('x wynosi 3')
+        break;
+    case 5:
+        console.log('x wynosi 5')
+        break;
+    default:
+        console.log('żadna z powyższych opcji nie została wybrana')
+}
