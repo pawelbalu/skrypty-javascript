@@ -1,13 +1,22 @@
-// OBIEKTY
+// const samochod = {
+//     marka: 'Mazda',
+//     model: '5',
+//     show: function(){
+//         alert(this.marka);
+//     }
+// }
 
-var osoba = {
-    imie: 'Jan',
-    nazwisko: 'Kowalski',
-    wiek: 34,
-    show: function(){
-        console.log('Mam na imię '+this.imie+' a na nazwisko '+this.nazwisko+' mam '+this.wiek+' lat');
-    }
+// console.log(samochod)
+
+
+function Samochod(marka, model){
+    this.marka = marka;
+    this.model = model;
+    this.show = function(){
+        alert(this.marka)
+    };
 }
 
+const sam1 = new Samochod('Honda', 'Civic');
 
-osoba.show()
+console.log(sam1)
