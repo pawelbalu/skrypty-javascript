@@ -1,11 +1,12 @@
-// TABLICE
+const tab = [1, 2, 3, 4, 5]
 
-/*
-const tablica = ['mleko', 'bułeczki', 'mąka', 'jajka', 12, true]
-console.log(tablica)
-*/
+// console.log(tab[0])
+// pętla for do wyświetlania tablicy
 
-/*
-const tablica = new Array('mleko', 'bułeczki', 'mąka', 'jajo', '12', 'true')
-console.log(tablica)
-*/
+for (let i=0 ; i<tab.length+4 ; i++){
+    tab[i] *=2
+    console.log(tab[i])
+    break;
+}
+
+// nie działa tak jak na kursie???
