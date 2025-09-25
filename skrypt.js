@@ -1,28 +1,21 @@
-// function ogloszenie(){
-//     console.log(this);
-// }
-// ogloszenie();
-
-
-let ofertyPracy = {
-    nazwa: 'Programista',
-    wynagrodzenie: 5000,
-    iloscKandydatow: 29,
-    wymagania: ['doświadczenie','wykształcenie'],
-    oferujemy: {
-        dniWTygodniu: 4,
-        urlop: 26,
+const osoba = {
+    imie: 'Jan',
+    nazwisko: 'Kowalski',
+    get imieOsoby(){
+        return this.imie;
     },
-    ogloszenie() {
-        console.log(`${this.nazwa}`, `${this.wynagrodzenie}`+'zł');
+    set imieOsoby(imieOsoby){
+        this.imie = imieOsoby;
     },
-    show(){
-        this.wymagania.forEach(rev => {
-            console.log(this.nazwa, rev);
-        })
+    get podpis(){
+        return this.imie+' '+this.nazwisko;
     }
 }
 
+// console.log(osoba.imie);
+// console.log(osoba.imieOsoby);
+// osoba.imieOsoby = 'Janek';
+// console.log(osoba.imie);
 
 
-ofertyPracy.show();
+console.log(osoba.podpis.toUpperCase());
