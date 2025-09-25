@@ -1,12 +1,11 @@
-const tab = [1, 2, 3, 4, 5]
+const tablica = [1,2,3]
 
-// console.log(tab[0])
-// pętla for do wyświetlania tablicy
+// tablica[0] = 8
 
-for (let i=0 ; i<tab.length+4 ; i++){
-    tab[i] *=2
-    console.log(tab[i])
-    break;
-}
+tablica.unshift(8)
+tablica.push(4)
 
-// nie działa tak jak na kursie???
+tablica.shift()
+tablica.pop()
+
+console.log(tablica)
