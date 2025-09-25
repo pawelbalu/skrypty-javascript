@@ -14,21 +14,38 @@ const samochody = [
         ilosc: 4,
     },
     {
-        marka: 'Mazda',
-        model: '5',
-        przebieg: 230000,
-        cena: 12000,
-        ilosc: 4,
+        marka: 'Toyota',
+        model: 'Auris',
+        przebieg: 23000,
+        cena: 56000,
+        ilosc: 7,
     },
 ];
 
+// METODA MAP
+
+// const modyfikacjaCeny = samochody.map(function(e){
+//     return e.cena*1.2
+// });
+
 // console.log(samochody)
+// console.log(modyfikacjaCeny)
 
-// samochody.forEach(function(e) {console.log('!')})
 
-// console.log(samochody.length)
+// METODA FILTER
 
-samochody.forEach(function(e){
-    if (e.przebieg>130000) return console.log(e.marka)
-})
 
+// const results = samochody.filter(function(e){
+//     return e.przebieg>130000
+// });
+
+// console.log(results)
+
+
+// METODA REDUCE
+
+const wartoscSamochodow = samochody.reduce(function(previousValue, currentValue){
+    return previousValue + currentValue.ilosc*currentValue.cena
+}, 0)
+
+console.log(wartoscSamochodow)
