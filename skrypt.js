@@ -1,16 +1,28 @@
-function Samochod(marka, model){
-    this.marka = marka;
-    this.model = model;
-    this.show = function(){
-        alert(this.marka)
-    };
+// function ogloszenie(){
+//     console.log(this);
+// }
+// ogloszenie();
+
+
+let ofertyPracy = {
+    nazwa: 'Programista',
+    wynagrodzenie: 5000,
+    iloscKandydatow: 29,
+    wymagania: ['doświadczenie','wykształcenie'],
+    oferujemy: {
+        dniWTygodniu: 4,
+        urlop: 26,
+    },
+    ogloszenie() {
+        console.log(`${this.nazwa}`, `${this.wynagrodzenie}`+'zł');
+    },
+    show(){
+        this.wymagania.forEach(rev => {
+            console.log(this.nazwa, rev);
+        })
+    }
 }
 
-const samochod1 = new Samochod('Ford', 'Mondeo');
 
-console.log(samochod1)
 
-samochod1.przebieg = 120000;
-samochod1.show1 = function(){alert(this.model)}
-
-console.log(samochod1.show1());
+ofertyPracy.show();
