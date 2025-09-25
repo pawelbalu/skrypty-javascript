@@ -1,14 +1,3 @@
-// const samochod = {
-//     marka: 'Mazda',
-//     model: '5',
-//     show: function(){
-//         alert(this.marka);
-//     }
-// }
-
-// console.log(samochod)
-
-
 function Samochod(marka, model){
     this.marka = marka;
     this.model = model;
@@ -17,6 +6,11 @@ function Samochod(marka, model){
     };
 }
 
-const sam1 = new Samochod('Honda', 'Civic');
+const samochod1 = new Samochod('Ford', 'Mondeo');
 
-console.log(sam1)
+console.log(samochod1)
+
+samochod1.przebieg = 120000;
+samochod1.show1 = function(){alert(this.model)}
+
+console.log(samochod1.show1());
