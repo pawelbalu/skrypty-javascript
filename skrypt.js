@@ -1,32 +1,50 @@
-// Funkcje anonomiowe, strzałkowe jako alternatywa, operator spread
+// Wykorzystanie bind, call i apply w funkcjach
 
-// let a = 3;
-// let b = 7;
-// let suma = 0;
+const Samochody = [
+    {
+        marka: 'Opel',
+        model: 'Astra',
+        przebieg: 120000,
+        cena: 10000,
+        ilosc: 3,
+        wyswietl: function() {return console.log(this.marka+''+this.model+''+this.cena)}
+    },
+    {
+        marka: 'Mazda',
+        model: '5',
+        przebieg: 140000,
+        cena: 12000,
+        ilosc: 4,
+        wyswietl: function() {return console.log(this.marka+''+this.model+''+this.cena)}
+    },
+    {
+        marka: 'Mazda',
+        model: '6',
+        przebieg: 230000,
+        cena: 12000,
+        ilosc: 4,
+        wyswietl: function() {return console.log(this.marka+''+this.model+''+this.cena)}
+    }
+];
 
-// (function dodawanie (x,y){
-//     let suma = x+y
-//     return console.log(suma)
-// }(a,b));
 
-
-// let suma = (x,y) => console.log(x+y)
-
-// suma(a,b)
-
-
-
-// ((x,y) => console.log(x+y))(a,b)
-
-// co gdy duzo liczb?
-
-const liczby = [1,2,3,4,5,6]
-const liczby2 = [8,9,...liczby]
-
-console.log(liczby2)
-
-// function suma(a,b,c,d,e,f){
-//     return a+b+c+d+e+f
+// function wyswietl(){
+//     console.log(this)
 // }
 
-// console.log(suma(...liczby))
+// wyswietl.call(Samochody)
+
+
+function newCar(marka, model, przebieg){
+    this.marka = marka;
+    this.model = model;
+    this.przebieg = przebieg;
+}
+
+function setPrice(cena){
+    newCar.apply(this, ['Mazda', '2', 45000]);
+    this.cena = cena
+    console.log('Szczegóły samochodu ', `${this.marka}`)
+}
+
+const nowySamochod = new setPrice(parseInt(prompt('Podaj cenę auta:')))
