@@ -1,21 +1,14 @@
-const osoba = {
-    imie: 'Jan',
-    nazwisko: 'Kowalski',
-    get imieOsoby(){
-        return this.imie;
-    },
-    set imieOsoby(imieOsoby){
-        this.imie = imieOsoby;
-    },
-    get podpis(){
-        return this.imie+' '+this.nazwisko;
-    }
+// Składnia tworzenia funkcji
+
+let a = 4
+let b = 8
+
+function dodawanie (x, y){
+    suma = x+y
+    return suma
 }
 
-// console.log(osoba.imie);
-// console.log(osoba.imieOsoby);
-// osoba.imieOsoby = 'Janek';
-// console.log(osoba.imie);
+dodawanie(a,b)
 
 
-console.log(osoba.podpis.toUpperCase());
+console.log(dodawanie(a,b))
