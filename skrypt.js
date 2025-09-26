@@ -2,19 +2,34 @@ let nr;
 let wybor;
 const pracownicy = new Array()
 
-function Osoba(imie,nazwisko){
+function Osoba(imie,nazwisko, numer){
     this.imie = imie
     this.nazwisko = nazwisko
+    this.numer = parseInt(numer)
 }
 
 
-function tworzenie(imie,nazwisko){
-    osoba = new Osoba(imie,nazwisko)
-    pracownicy.push(osoba)
-}
+// function tworzenie(imie,nazwisko){
+//     let osoba = new Osoba(imie,nazwisko)
+//     pracownicy.push(osoba)
+// }
 
-function usuwanie(nr){
-    delete pracownicy[nr]
+// function usuwanie(nr){
+//     delete pracownicy[nr]
+// }
+
+const metody = {
+    tworzeniePracownika: function(imie,nazwisko,numer){
+        console.log(this)
+        let osoba = new Osoba(imie,nazwisko,numer)
+        pracownicy.push(osoba)
+    },
+    wyswietlPracownika: function(){
+        document.write('Imię: ',this.imie, ' nazwisko: ',this.nazwisko)
+    },
+    usuwaniePracownika: function(){
+        delete pracownicy[this.numer-1]
+    }
 }
 
 
@@ -24,18 +39,27 @@ while(wybor!=0){
     case '1':
         let imie = prompt('podaj imię:')
         let nazwisko = prompt('podaj nazwisko:')
-        tworzenie(imie,nazwisko)
+        let numer = prompt('podaj numer pracownika')
+        let tworzenie = metody.tworzeniePracownika.bind(pracownicy)
+        tworzenie(imie,nazwisko,numer)
         break;
 
     case '2':
-        nr = prompt('podaj nr pracownika do usunięcia')
-        usuwanie(nr)
+        let nrP = prompt('podaj nr pracownika do usunięcia')
+        metody.usuwaniePracownika.apply(pracownicy[nrP])
+        wybor=0
         break;
 
     case '3':
         pracownicy.forEach((e)=>{
             console.log(e)
         })
+        break;
+
+    case '4':
+        let nr = prompt('Podaj nr indeksu pracownika')
+        metody.wyswietlPracownika.call(pracownicy[nr])
+        wybor=0
         break;
 
     default:
