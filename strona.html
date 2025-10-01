@@ -4,19 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <title>Document Object Model</title>
+    <link rel="stylesheet" href="styl.css">
 </head>
 <body>
-    
-        <header></header>
+    <div id="container">
 
-        <section>
-            <p id="p"></p>
-        </section>
+        <form action="#">
+            <label for="imie"><input class="gracz" type="button" value="Gracz 1" onclick="uzytkownik('uzytk1')"></label>
+            <label for="nazwisko"><input class="gracz" type="button" value="Gracz 2" onclick="uzytkownik('uzytk2')"></label>
+        </form>
 
-        <footer></footer>
+        <form action="#">
+            <div class="row">
+                <button id="a" onclick="zdarzenia(0)">?</button><button onclick="zdarzenia(1)">?</button><button onclick="zdarzenia(2)">?</button>
+            </div>
+            <div class="row">
+                <button onclick="zdarzenia(3)">?</button><button onclick="zdarzenia(4)">?</button><button onclick="zdarzenia(5)">?</button>
+            </div>
+            <div class="row">
+                <button onclick="zdarzenia(6)">?</button><button onclick="zdarzenia(7)">?</button><button onclick="zdarzenia(8)">?</button>
+            </div>
 
-    <script src="skrypt.js"></script>
+        </form>
+    </div>
+
+
+    <script src="skrypt.js">
+    </script>
 </body>
 </html>
