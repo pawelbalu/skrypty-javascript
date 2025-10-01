@@ -169,14 +169,17 @@
   
   .gameButton{
     position: absolute;
+    font-family: 'Proxima Nova';
+    font-style: normal;
+    font-weight: 600;
+    color: #07E0CA;
+    font-size: 60px;
     width: 150px;
     height: 150px;
     background: #FFFFFF;
   border-radius: 10px;
   border: 1px solid white;
   }
-  
-  
   
   #a{
   left: 725px;
