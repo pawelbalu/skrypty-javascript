@@ -1,3 +1,27 @@
+function graczPierwszy(){
+    g1.style.border = '1px solid black'
+    g2.style.border = 'none'
+}
+
+
+
+function graczDrugi(){
+    g2.style.border = '1px solid black'
+    g1.style.border = 'none'
+}
+
+
+
+function styl(){
+    document.querySelectorAll('.gameButton')[0].setAttribute('style', 'color: #07EOCA')
+}
+
+
+
+
+
+
+
 function gramy(){
     let gracz1 = document.getElementById('gracz1').value
     let gracz2 = document.getElementById('gracz2').value
@@ -21,6 +45,8 @@ function gramy(){
 
 
     document.getElementById('g1').onclick = () => {
+        graczPierwszy()
+        styl()
         pole1.onclick = () => {
             pole1.innerText = "X"
         }
@@ -54,6 +80,8 @@ function gramy(){
 
 
     document.getElementById('g2').onclick = () => {
+        graczDrugi()
+        styl()
         pole1.onclick = () => {
             pole1.innerText = "O"
         }
