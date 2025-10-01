@@ -1,63 +1,56 @@
-<!--
-element.textContents -> cały tekst zawarty w elemencie i wszystkie jego elementy podrzędne, które służą do formatowania
-
-element.innerText -> zwraca cały tekst zawarty w elemencie i wszystkie jego elementy potomne
-
-element.innerHTML -> zwraca cały tekst, w tym znaczniki HTML, który jest zawarty w elemencie
-
-element.attribute -> nowa wartość zmienia wartość atrybutu elementu HTML
-
-element.stlye.property -> nowy styl zmienia styl elementu HTML
-
-element.createElement -> tworzy element
-
-element.removeChild -> usuwa element
-
-element.appendChild -> dodaje element
-
-element.replaceChild -> zamienia element
--->
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document Object Model</title>
-    <link rel="stylesheet" href="styl.css">
+    <title>DOM</title>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
-    <div id="container">
 
-        <form action="#">
-            <input type="text" placeholder="imie" id="gracz1">
-            <input type="text" placeholder="imie" id="gracz2">
-            <input type="submit" value="START" onclick="gramy()">
-        </form>
-        
-        <form action="#">
-            <label for="imie1"><input class="gracz" id="g1" type="button" value="Gracz 1" onclick="uzytkownik('uzytk1')"></label>
-            <label for="imie2"><input class="gracz" id="g2" type="button" value="Gracz 2" onclick="uzytkownik('uzytk2')"></label>
-        </form>
+<div id="kontener">
+   <div id="gora">
+    <form action="#">
+        <input type="text" value="imię" id="gracz1" class="gracz">
+        <input type="text" value="imię" id="gracz2" class="gracz">
+        <input type="submit" id="start"   value="START" onclick="gramy()">
+    </form>
 
-        <form action="#">
-            <div class="row">
-                <button id="a">?</button><button id="b">?</button><button id="c">?</button>
-            </div>
-            <div class="row">
-                <button id="d">?</button><button id="e">?</button><button id="f">?</button>
-            </div>
-            <div class="row">
-                <button id="g">?</button><button id="h">?</button><button id="i">?</button>
-            </div>
-
-        </form>
-    </div>
+    <h1>Wygrany:</h1>
+   </div>
 
 
-    <script src="skrypt.js">
-    </script>
+   <div id="dol">
+        <div id="wyborGracza">
+            <form action="#">
+                <!-- <label for="imie1"><input class="gracz" id="g1" type="button" value="Gracz 1    X"></label>
+                <label for="imie2"><input class="gracz" id="g2" type="button" value="Gracz 2    O"></label> -->
+                <button id="g1">imię X</button><button id="g2">imię  O</button>
+            </form>
+        </div>
+
+    <form action="#" id="przyciskiGry">
+        <div class="row">
+            <button id="a" class="gameButton"></button><button id="b" class="gameButton"></button><button id="c" class="gameButton"></button>
+        </div>
+        <div class="row">
+            <button id="d" class="gameButton"></button><button id="e" class="gameButton"></button><button id="f" class="gameButton"></button>
+        </div>
+        <div class="row">
+            <button id="g" class="gameButton"></button><button id="h" class="gameButton"></button><button id="i" class="gameButton"></button>
+        </div>
+    </form>
+   </div>
+   
+
+
+ 
+</div>
+    
+    
+
+        <script src="script.js"></script>
 </body>
 </html>
